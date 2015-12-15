@@ -14,35 +14,36 @@
     <div class="calculator">
         <p id="title">Webculator</p>
         <p id="tag">Online Calculator</p>
-        <input type="text" id="screen" />
+        <div id="screen"></div>
         <div class="row">
-            <button class="redButton">AC</button>
-            <button class="redButton">CE</button>
-            <button class="squareButton">%</button>
-            <button class="squareButton">/</button>
+            <button class="redButton" id="allClear">AC</button>
+            <button class="redButton" id="clear">CE</button>
+            <button class="squareButton operation">%</button>
+            <button class="squareButton operation">/</button>
         </div>
         <div class="row">
-            <button class="squareButton">7</button>
-            <button class="squareButton">8</button>
-            <button class="squareButton">9</button>
-            <button class="squareButton">X</button>
+            <button class="squareButton number" value="7">7</button>
+            <button class="squareButton number" value="8">8</button>
+            <button class="squareButton number" value="9">9</button>
+            <button class="squareButton operation">X</button>
         </div>
         <div class="row">
-            <button class="squareButton">4</button>
-            <button class="squareButton">5</button>
-            <button class="squareButton">6</button>
+            <button class="squareButton number" value="4">4</button>
+            <button class="squareButton number" value="5">5</button>
+            <button class="squareButton number" value="5">5</button>
+            <button class="squareButton number" value="6">6</button>
             <button class="squareButton">-</button>
         </div>
         <div class="row">
-            <button class="squareButton">1</button>
-            <button class="squareButton">2</button>
-            <button class="squareButton">3</button>
-            <button class="long">+</button>
+            <button class="squareButton number">1</button>
+            <button class="squareButton number">2</button>
+            <button class="squareButton number">3</button>
+            <button class="long operation">+</button>
         </div>
         <div class="row">
-            <button class="squareButton">0</button>
-            <button class="squareButton">.</button>
-            <button class="squareButton">=</button>
+            <button class="squareButton number">0</button>
+            <button class="squareButton number">.</button>
+            <button class="squareButton" id="equals">=</button>
         </div>
     </div>
 
