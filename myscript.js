@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    //keeps numbers less than 15 digits long
     var testNumLength = function (number) {
         if (number.length > 9) {
             screendiv.text(number.substr(number.length - 9, 9));
@@ -12,9 +13,11 @@ $(document).ready(function () {
     var firstNum = "";
     var secondNum = "";
     var operator = "";
-    var total = "";
+    var total = "0";
     var screendiv = $("#screen");
     screendiv.text("0");
+
+    //when typing in any number
     $(".number").click(function () {
 
         firstNum += $(this).text();
@@ -22,26 +25,43 @@ $(document).ready(function () {
         testNumLength(firstNum);
 
     });
+
+    //when performing an operation
     $(".operation").click(function () {
-        operator = $(this).text;
+        operator = $(this).text();
         secondNum = firstNum;
         firstNum = "";
-        screendiv.text("0");
-
     });
 
-    $("#allClear #clear").click(function () {
+    $("#allClear, #clear").click(function () {
         firstNum = "";
         screendiv.text("0");
         if ($(this).attr("id") === "allClear") {
             secondNum = "";
         }
+    });
 
+    //when calculating percentage of last number entered
+    $(".percentage").click(function () {
+        firstNum = firstNum / 100;
+        screendiv.text(firstNum);
 
     });
-    $(".equals").click(function () {
-
-
+    $("#equals").click(function () {
+        if (operator === "+") {
+            total = parseFloat(firstNum) + parseFloat(secondNum);
+        } else if (operator === "-") {
+            total = parseFloat(secondNum) - parseFloat(firstNum);
+        } else if (operator === "/") {
+            total = parseFloat(secondNum) / parseFloat(firstNum);
+        } else if (operator === "X") {
+            total = parseFloat(secondNum) * parseFloat(firstNum);
+        }
+        total = total.toString(10);
+        screendiv.text(total);
+        firstNum = total;
+        console.log(total);
     });
+
 
 });

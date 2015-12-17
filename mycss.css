@@ -1,6 +1,10 @@
+    body {
+    background-image: url("http://i.imgur.com/eThq7VH.jpg");
+}
+
 .calculator {
     width: 300px;
-    height: 400px;
+    height: 450px;
     background-color: lightsteelblue;
     background-image: url("http://i.imgur.com/8P98CnN.png");
     margin: 0 auto;
@@ -43,16 +47,13 @@
 
 .calculator .row {
     display: block;
+    padding: 5px;
 }
 
-.calculator button {
-    width: 50px;
-    height: 50px;
-}
-
-.redButton .squareButton {
+.redButton,
+.squareButton {
     border-radius: 13px;
-    border: 4px solid #ffffff;
+    border: 3px solid #ffffff;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -61,7 +62,8 @@
     font-weight: bold;
     padding: 10px 10px;
     text-decoration: none;
-    text-shadow: 0px 2px 0px #b23e35;
+    width: 50px;
+    height: 50px;
 }
 
 .redButton {
@@ -73,27 +75,35 @@
     -webkit-border-radius: 13px;
 }
 
-.squareButton .long {
-    background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #d4d4d4);
-    background-image: -moz-linear-gradient(top, #ffffff, #d4d4d4);
-    background-image: -ms-linear-gradient(top, #ffffff, #d4d4d4);
-    background-image: -o-linear-gradient(top, #ffffff, #d4d4d4);
-    background-image: linear-gradient(to bottom, #ffffff, #d4d4d4);
-    -moz-border-radius: 13px;
-    -webkit-border-radius: 13px;
+.squareButton {
+    background: #6f7273;
+    background-image: -webkit-linear-gradient(top, #6f7273, #000000);
+    background-image: -moz-linear-gradient(top, #6f7273, #000000);
+    background-image: -ms-linear-gradient(top, #6f7273, #000000);
+    background-image: -o-linear-gradient(top, #6f7273, #000000);
+    background-image: linear-gradient(to bottom, #6f7273, #000000);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    font-family: Arial;
+    color: #ffffff;
 }
 
 .long {
     width: 50px;
     height: 80px;
-}
-
-.myButton:hover {
-    background-color: #eb675e;
-}
-
-.myButton:active {
-    position: relative;
-    top: 1px;
-}
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    .number:hover {
+        background-color: #eb675e;
+    }
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
