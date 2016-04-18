@@ -1,12 +1,14 @@
     body {
-    background-image: url("http://i.imgur.com/eThq7VH.jpg");
+    background-image: url("http://dishofsoul.com/extfiles/47df1e34.png");
+
 }
 
 .calculator {
     width: 300px;
     height: 450px;
-    background-color: lightsteelblue;
-    background-image: url("http://i.imgur.com/8P98CnN.png");
+    background-color: gray;
+   background-image: url("http://dishofsoul.com/extfiles/calc2.png");
+
     margin: 0 auto;
     border-top-left-radius: 80% 70px;
     border-top-right-radius: 80% 70px;
@@ -14,6 +16,8 @@
     border-bottom-right-radius: 80% 70px;
     box-shadow: inset 5px 0 10px -5px #635e61, inset -5px 0 10px -5px #635e61, inset 0px -5px 10px -2px #635e61, 0 0 1px 2px #635e61, 0 10px 20px 0 #494547;
     text-align: center;
+
+ 
 }
 
 #screen {
@@ -33,7 +37,7 @@
 .calculator p#title {
     padding-top: 10px;
     margin-bottom: -10px;
-    color: black;
+    color: navajowhite;
     font-family: sans-serif;
     font-weight: bold;
 }
@@ -53,12 +57,13 @@
 .redButton,
 .squareButton {
     border-radius: 13px;
-    border: 3px solid #ffffff;
+    border: 2px solid;
+    border-color: dimgray;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     padding: 10px 10px;
     text-decoration: none;
