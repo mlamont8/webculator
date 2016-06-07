@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //keeps numbers less than 15 digits long
+    //keeps numbers smaller than 15 digits 
     var testNumLength = function (number) {
         if (number.length > 9) {
             screendiv.text(number.substr(number.length - 9, 9));
@@ -32,7 +32,7 @@ $(document).ready(function () {
         secondNum = firstNum;
         firstNum = "";
     });
-
+// clearing screen
     $("#allClear, #clear").click(function () {
         firstNum = "";
         screendiv.text("0");
@@ -47,6 +47,8 @@ $(document).ready(function () {
         screendiv.text(firstNum);
 
     });
+    
+    // when selecting the equals
     $("#equals").click(function () {
         if (operator === "+") {
             total = parseFloat(firstNum) + parseFloat(secondNum);
